@@ -6,9 +6,9 @@
 int main()
 {
 	Card newCard;
+	Blackjack Game;
 
-	std::string myCard = newCard.D1();
-	std::cout << myCard;
+	Game.generateRandomCardNumber();
 
 	return 0;
 }
