@@ -7,6 +7,7 @@ class Card
 	public:
 		Card();
 		std::string getCard(std::string card_identifier);
+		std::string D1();
 };
 
 #endif
