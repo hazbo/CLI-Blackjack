@@ -6,6 +6,5 @@
 int main()
 {
 	Blackjack Game;
-
 	return 0;
 }

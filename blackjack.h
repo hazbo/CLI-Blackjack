@@ -21,6 +21,8 @@ class Blackjack
 		Blackjack();
 		int generateRandomCardNumber();
 		std::string cardValueToString(int card_value);
+		std::string generateRandomCardSuit();
+		std::string concatCardSuitAndCardNumber(std::string card_suit, std::string card_number);
 };
 
 #endif
