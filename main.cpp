@@ -5,7 +5,7 @@
 
 int main()
 {
-	Blackjack Game;
+  Blackjack Game;
   Card newCard;
 
   // For testing, we will output the Ace, 5, 6 and 10 of diamonds
@@ -15,5 +15,5 @@ int main()
   std::cout << newCard.D1();
   std::cout << newCard.D10();
 
-	return 0;
+  return 0;
 }
