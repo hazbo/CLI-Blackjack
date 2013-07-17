@@ -6,7 +6,8 @@ class Blackjack
 {
 	public:
 		Blackjack();
-		std::string generateRandomCardNumber();
+		int generateRandomCardNumber();
+		std::string cardValueToString(int card_value);
 };
 
 #endif
