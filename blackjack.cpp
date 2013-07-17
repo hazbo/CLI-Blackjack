@@ -9,9 +9,7 @@ Blackjack::Blackjack()
 {
     GameStructure game_structure;
 
-    int value        = generateRandomCardNumber();
-    std::string suit = generateRandomCardSuit();
-    std::string concat_card_value = concatCardSuitAndCardNumber(suit, cardValueToString(value));
+    std::string concat_card_value = createCard();
 
     usleep(10000);
 
@@ -19,17 +17,24 @@ Blackjack::Blackjack()
     //game_structure.dealer_card_one_value = generateRandomCardNumber();
 }
 
-int Blackjack::generateRandomCardNumber()
+std::string Blackjack::createCard()
+{
+    short int card_number = generateRandomCardNumber();
+    std::string card_suit = generateRandomCardSuit();
+    return std::string(card_suit) + cardNumberToString(card_number);
+}
+
+short int Blackjack::generateRandomCardNumber()
 {
     std::srand(std::time(0));
     int r = std::rand() % 13 + 1;
     return r;
 }
 
-std::string Blackjack::cardValueToString(int card_value)
+std::string Blackjack::cardNumberToString(short int card_number)
 {
     std::ostringstream s;
-    s << card_value;
+    s << card_number;
     std::string converted(s.str());
 
     return std::string(s.str());
@@ -47,10 +52,4 @@ std::string Blackjack::generateRandomCardSuit()
     std::string converted(s.str());
 
     return std::string(s.str());
-}
-
-std::string Blackjack::concatCardSuitAndCardNumber(std::string card_suit, std::string card_number)
-{
-    std::string concat = std::string(card_suit) + card_number;
-    return concat;
 }

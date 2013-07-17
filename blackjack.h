@@ -19,10 +19,12 @@ class Blackjack
 {
     public:
         Blackjack();
-        int generateRandomCardNumber();
-        std::string cardValueToString(int card_value);
+        std::string createCard();
+
+    private:
+        short int generateRandomCardNumber();
+        std::string cardNumberToString(short int card_number);
         std::string generateRandomCardSuit();
-        std::string concatCardSuitAndCardNumber(std::string card_suit, std::string card_number);
 };
 
 #endif
