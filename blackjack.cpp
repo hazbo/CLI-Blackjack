@@ -11,7 +11,7 @@ Blackjack::Blackjack()
 
     std::string concat_card_value = createCard();
 
-    usleep(10000);
+    //usleep(10000);
 
     //game_structure.player_card_one_value = player_card_one_value;
     //game_structure.dealer_card_one_value = generateRandomCardNumber();

@@ -2,9 +2,12 @@
 #include <string>
 #include "card.h"
 
-Card::Card()
+Card::Card(std::string card_number, std::string card_type)
 {
-
+	// Still need to use the value passed through the card_type parameter to instantiate the correct type eg: Heart/Diamond etc..
+	std::cout << this->Top(card_number);
+	std::cout << this->Heart();
+	std::cout << this->Bottom(card_number);
 }
 
 std::string Card::Top(std::string card_number)
